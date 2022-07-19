@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "938204263493",
+    "project_id": "socialframe-bd633",
+    "storage_bucket": "socialframe-bd633.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938204263493:android:13659764ae6a3840be1f2c",
+        "android_client_info": {
+          "package_name": "com.example.socialframe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938204263493-act7plu7429giiqvomgnd06jm2ukg99h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNFOHhZt-GlzJOKe0LEekRCrVbmLY1_-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938204263493-act7plu7429giiqvomgnd06jm2ukg99h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938204263493-ealalc34blb8cfeq47vnt42au6fq0mjl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.socialframe"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
