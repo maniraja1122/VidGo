@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:socialframe/Repository/DBHelper.dart';
-import 'package:socialframe/Screens/ProfileShow.dart';
+import 'package:VidGo/Repository/DBHelper.dart';
+import 'package:VidGo/Screens/ProfileShow.dart';
 
 class CommentItem extends StatelessWidget {
   QueryDocumentSnapshot snap;

@@ -1,9 +1,7 @@
+import 'package:VidGo/Repository/DBHelper.dart';
+import 'package:VidGo/Widgets/BelowCameraStack.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:socialframe/Repository/DBHelper.dart';
-import 'package:socialframe/Widgets/BelowCameraStack.dart';
-import 'package:socialframe/Widgets/MyDrawer.dart';
-import 'package:flutter/services.dart';
 
 import '../Routes.dart';
 
@@ -16,7 +14,7 @@ class EditProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Edit Profile"),
+        title: Text("Edit Profile",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: [
           IconButton(
@@ -34,7 +32,7 @@ class EditProfile extends StatelessWidget {
                   });
                 });
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Data Saved Successfully")));
-                Navigator.pushNamed(context, Routes.Home);
+                Navigator.pop(context);
               }
             },
             icon: Icon(Icons.check),

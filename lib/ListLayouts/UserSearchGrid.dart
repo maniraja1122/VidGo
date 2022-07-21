@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:socialframe/Screens/ProfileShow.dart';
+import 'package:VidGo/Screens/ProfileShow.dart';
 
 class UserSearchGrid extends StatelessWidget {
   QueryDocumentSnapshot snapshot;

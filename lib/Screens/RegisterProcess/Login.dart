@@ -45,7 +45,7 @@ return  Scaffold(
                 SizedBox(
                   height: 10,
                 ),
-                Text("Welcome back to Social Frame"),
+                Text("Welcome back to VidGo"),
                 SizedBox(
                   height: 30,
                 ),

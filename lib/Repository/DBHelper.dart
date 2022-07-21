@@ -4,12 +4,12 @@ import 'dart:io' as io;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:socialframe/Models/Chat.dart';
-import 'package:socialframe/Models/FollowRelation.dart';
-import 'package:socialframe/Models/LikeRelation.dart';
-import 'package:socialframe/Models/MessageModel.dart';
-import 'package:socialframe/Models/Notifications.dart';
-import 'package:socialframe/Models/Post.dart';
+import 'package:VidGo/Models/Chat.dart';
+import 'package:VidGo/Models/FollowRelation.dart';
+import 'package:VidGo/Models/LikeRelation.dart';
+import 'package:VidGo/Models/MessageModel.dart';
+import 'package:VidGo/Models/Notifications.dart';
+import 'package:VidGo/Models/Post.dart';
 
 class DBHelper {
   static var db = FirebaseFirestore.instance;

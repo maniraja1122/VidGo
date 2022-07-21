@@ -1,67 +1,38 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:socialframe/ListLayouts/CommentItem.dart';
-import 'package:socialframe/Screens/ProfileShow.dart';
 
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
+import '../ListLayouts/CommentItem.dart';
 import '../Models/Comment.dart';
 import '../Models/Notifications.dart';
 import '../Repository/DBHelper.dart';
-class ShowComment extends StatelessWidget {
+
+
+class CommentBottomSheet extends StatelessWidget {
   QueryDocumentSnapshot snap;
-  ShowComment({Key? key, required this.snap}) : super(key: key);
-  @override
+  CommentBottomSheet({required this.snap,Key? key}) : super(key: key);
   var commenttext = "";
   var controller = TextEditingController();
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Comments"),
-        centerTitle: true,
-      ),
-      body: SingleChildScrollView(
+    return Container(
+      constraints: BoxConstraints(
+        maxHeight: MediaQuery.of(context).size.height-200,
+      minHeight: 0),
+      child: SingleChildScrollView(// Optional
         child: Column(
-          children: [
-            StreamBuilder(
-              stream: DBHelper.db
-                  .collection("Users")
-                  .where("key", isEqualTo: snap.get("author"))
-                  .snapshots(),
-              builder: (BuildContext context,
-                  AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
-                if (snapshot.hasError) {
-                  return Text("Error");
-                } else if (snapshot.hasData) {
-                  var data = snapshot.data!.docs[0];
-                  return ListTile(
-                    onTap: () {
-                      var userkey = snap.get("author");
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (c) => ProfileShow(id: userkey)));
-                    },
-                    leading: CircleAvatar(
-                      radius: 25,
-                      backgroundImage: data.get("MyPICUrl") == ""
-                          ? AssetImage("assets/images/placeholder.png")
-                              as ImageProvider
-                          : NetworkImage(data.get("MyPICUrl")),
-                    ),
-                    title: Text(data.get("Name")),
-                  );
-                }
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              },
-            ),
-            snap.get("title") == ""
-                ? SizedBox(
-                    height: 0,
-                  )
-                : Text(snap.get("title")),
-            Card(
-              child: Image.network(snap.get("imagelink"),
-                  height: 400, width: 400, fit: BoxFit.cover),
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(child: Text("Comments",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),)),
+                  InkWell(onTap: (){
+                    Navigator.pop(context);
+                  },child: Icon(Icons.cancel_outlined))
+                ],
+              ),
             ),
             StreamBuilder(
               stream: DBHelper.db
@@ -71,7 +42,7 @@ class ShowComment extends StatelessWidget {
                   .snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>>
-                      snapshot) {
+                  snapshot) {
                 if(snapshot.hasError){
                   return Text("Error");
                 }
@@ -79,7 +50,7 @@ class ShowComment extends StatelessWidget {
                   var data=snapshot.data;
                   return ListView.builder(physics: NeverScrollableScrollPhysics(),itemBuilder:(c,i){
                     return CommentItem(snap: data!.docs[i]);
-                  },itemCount:data!.docs.length,shrinkWrap: true,);
+                  },itemCount:data!.docs.length,shrinkWrap: true);
                 }
                 return Center(child: CircularProgressIndicator(),);
               },

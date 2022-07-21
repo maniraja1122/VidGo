@@ -1,4 +1,4 @@
-import 'package:socialframe/Repository/AuthHelper.dart';
+import 'package:VidGo/Repository/AuthHelper.dart';
 
 class Post {
   String title = "";

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:socialframe/Repository/DBHelper.dart';
-import 'package:socialframe/Screens/MessageBox.dart';
+import 'package:VidGo/Repository/DBHelper.dart';
+import 'package:VidGo/Screens/MessageBox.dart';
 
 class ChatListGrid extends StatelessWidget {
   QueryDocumentSnapshot snap;

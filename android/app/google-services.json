@@ -1,37 +1,37 @@
 {
   "project_info": {
-    "project_number": "938204263493",
-    "project_id": "socialframe-bd633",
-    "storage_bucket": "socialframe-bd633.appspot.com"
+    "project_number": "326216316701",
+    "project_id": "vidgo-f9466",
+    "storage_bucket": "vidgo-f9466.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:938204263493:android:13659764ae6a3840be1f2c",
+        "mobilesdk_app_id": "1:326216316701:android:84cd00b96798e3f27853f4",
         "android_client_info": {
           "package_name": "com.example.socialframe"
         }
       },
       "oauth_client": [
         {
-          "client_id": "938204263493-act7plu7429giiqvomgnd06jm2ukg99h.apps.googleusercontent.com",
+          "client_id": "326216316701-ho9u0tt6u9tqdqc5a12n4gubalfn3fba.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNFOHhZt-GlzJOKe0LEekRCrVbmLY1_-o"
+          "current_key": "AIzaSyCj69eO-Dpb7nRYaj1NmqR70ywkc-He72M"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "938204263493-act7plu7429giiqvomgnd06jm2ukg99h.apps.googleusercontent.com",
+              "client_id": "326216316701-ho9u0tt6u9tqdqc5a12n4gubalfn3fba.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "938204263493-ealalc34blb8cfeq47vnt42au6fq0mjl.apps.googleusercontent.com",
+              "client_id": "326216316701-865p3oofffh4vn0bu33t4ahg4ifquu3i.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.socialframe"

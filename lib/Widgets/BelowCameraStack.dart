@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:socialframe/Repository/DBHelper.dart';
+import 'package:VidGo/Repository/DBHelper.dart';
 
 class BelowCameraStack extends StatelessWidget {
   const BelowCameraStack({Key? key}) : super(key: key);

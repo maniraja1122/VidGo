@@ -4,10 +4,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:socialframe/Models/User.dart';
-import 'package:socialframe/Repository/AuthHelper.dart';
-import 'package:socialframe/Repository/DBHelper.dart';
-import 'package:socialframe/Widgets/RoundButton.dart';
+import 'package:VidGo/Models/User.dart';
+import 'package:VidGo/Repository/AuthHelper.dart';
+import 'package:VidGo/Repository/DBHelper.dart';
+import 'package:VidGo/Widgets/RoundButton.dart';
 
 import '../../Routes.dart';
 
